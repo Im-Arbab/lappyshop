@@ -14,7 +14,7 @@ connectDB()
 
 // ---------- CORS ----------
 app.use(cors({
-origin: "https://lappyshop.com",
+origin: "https://lappyshop.com/",
 credentials:true
 }))
 
