@@ -8,7 +8,7 @@ try{
 
 res.json({
 success:true,
-url:`http://localhost:8080/uploads/${req.file.filename}`
+url:`${req.protocol}://${req.get("host")}/uploads/${req.file.filename}`
 })
 
 }catch(err){
