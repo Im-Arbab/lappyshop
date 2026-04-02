@@ -7,7 +7,6 @@ const razorpay = new Razorpay({
 
 module.exports = razorpay
 
-
 // REACT_APP_RAZORPAY_KEY=rzp_live_SPrq2OQEHiH2dl
 // RAZORPAY_SECRET=az3itFslwtuNwGtpmldXPOnU
 // # RAZORPAY_KEY_ID=rzp_test_1a2b3c4d5e

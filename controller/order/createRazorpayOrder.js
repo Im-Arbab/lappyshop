@@ -23,7 +23,7 @@ const createRazorpayOrder = async (req, res) => {
 
     const totalAmount = cartItems.reduce((sum, item) => {
 
-      const price = Number(item.price) || 0   // 🔥 FIX
+      const price = Number(item.productId?.price) || 0   // 🔥 FIX
       const qty = Number(item.quantity) || 1
 
       return sum + price * qty
