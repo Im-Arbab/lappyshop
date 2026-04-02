@@ -18,7 +18,8 @@ app.use(cors({
 // origin: process.env.FRONTEND_URL || "http://localhost:3000",
 origin : "https://lappyshop.com",
 credentials:true,
-methods: ["GET", "POST", "DELETE", "OPTIONS"],
+methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+allowedHeaders: ["Content-Type", "Authorization"],
 }));
 
 app.options("*", cors());
