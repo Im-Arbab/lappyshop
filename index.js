@@ -48,8 +48,8 @@ app.use("/api",uploadRoute)
 app.get("/",(req,res)=>{
 res.send("API Running")
 })
-
+const PORT = process.env.PORT
 // ---------- Server ----------
 app.listen(process.env.PORT || 8080,()=>{
-console.log("🚀 Server running on port",process.env.PORT || 8080)
+console.log("🚀 Server running on port",PORT)
 })
