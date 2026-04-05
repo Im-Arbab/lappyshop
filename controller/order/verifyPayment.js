@@ -1,5 +1,5 @@
 const crypto = require("crypto");
-const orderModel = require("../../models/order");
+const orderModel = require("../../models/orderModel");
 const cartModel = require("../../models/cartProduct");
 
 const verifyPayment = async (req, res) => {
