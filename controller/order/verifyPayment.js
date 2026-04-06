@@ -24,11 +24,17 @@ const verifyPayment = async (req, res) => {
     const items = cartItems.map(item => ({
       productId: item.productId._id,
       quantity: item.quantity,
-      price: item.price
+      // price: item.price
+      price: item.productId?.price || item.price
     }));
 
+    // const totalAmount = cartItems.reduce(
+    //   (sum, item) => sum + item.price * item.quantity,
+    //   0
+    // );
     const totalAmount = cartItems.reduce(
-      (sum, item) => sum + item.price * item.quantity,
+      (sum, item) =>
+        sum + (item.productId?.price || item.price) * item.quantity,
       0
     );
 
