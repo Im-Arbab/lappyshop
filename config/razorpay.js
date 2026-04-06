@@ -8,7 +8,8 @@ const razorpay = new Razorpay({
 module.exports = razorpay;
 
 
-
+console.log("RAZOR KEY:", process.env.RAZORPAY_KEY);
+console.log("RAZOR SECRET:", process.env.RAZORPAY_SECRET);
 
 
 // const Razorpay = require("razorpay")
