@@ -32,11 +32,11 @@ const createRazorpayOrder = async (req, res) => {
       Number(item.productId?.price) || 
         Number(item.productId?.sellingPrice) ||
         Number(item.price) || 0;
-      const qty = Number(item.quantity) || 1
+      const qty = Number(item.quantity) || 1;
 
       return sum + price * qty;
 
-    }, 0)
+    }, 0);
 console.log("CART ITEMS:", cartItems);
 console.log("TOTAL AMOUNT:", totalAmount);
     if (!totalAmount || totalAmount <= 0) {
