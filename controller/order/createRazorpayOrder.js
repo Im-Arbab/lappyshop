@@ -63,14 +63,15 @@ console.log("TOTAL:", totalAmount);
       amount: totalAmount
     })
 
-  } catch (error) {
+  }catch (error) {
+  console.log("RAZOR ERROR FULL:", error);   // 🔥 ADD THIS
+  console.log("RAZOR ERROR MESSAGE:", error.message);
 
-    res.status(500).json({
-      success: false,
-      message: error.message,
-    })
-
-  }
+  res.status(500).json({
+    success: false,
+    message: error.message,
+  });
+}
 
 }
 

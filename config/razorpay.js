@@ -4,12 +4,11 @@ const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY,
   key_secret: process.env.RAZORPAY_SECRET,
 });
+console.log("RAZOR CONFIG:", process.env.RAZORPAY_KEY, process.env.RAZORPAY_SECRET);
 
 module.exports = razorpay;
 
 
-console.log("RAZOR KEY:", process.env.RAZORPAY_KEY);
-console.log("RAZOR SECRET:", process.env.RAZORPAY_SECRET);
 
 
 // const Razorpay = require("razorpay")
