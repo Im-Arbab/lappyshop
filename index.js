@@ -14,9 +14,22 @@ connectDB()
 
 app.set("trust proxy", 1);
 // ---------- CORS ----------
+
+const allowedOrigins = [
+    "https://lappyshop.com",
+    "https://www.lappyshop.com",
+    "http://localhost:3000"
+]
 app.use(cors({
 // origin: process.env.FRONTEND_URL || "http://localhost:3000",
-origin : "https://lappyshop.com",
+origin : function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+    } else {
+        callback(new Error("CORS not allowed: " + origin));
+    }
+},
 credentials:true,
 methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
 allowedHeaders: ["Content-Type", "Authorization"],
