@@ -15,8 +15,16 @@ const productSchema = new mongoose.Schema({
 
 productName:String,
 brand:String,
-category:String,
+category:
+{type: String,
+    enum: ["gaming", "business", "2in1", "ultrabook", "desktop"]
+},
 
+screenSize:String,
+processor: String,
+generation: String,
+ram:String,
+storage:String,
 description:String,
 
 productImage:[String],
