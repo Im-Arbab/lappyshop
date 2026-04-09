@@ -38,6 +38,10 @@ const deleteAddress = require("../controller/address/deleteAddress")
 const getSingleOrder = require("../controller/order/getSingleOrder")
 const getDashboardStats = require('../controller/order/getDashboardStats')
 const deleteProduct = require('../controller/product/deleteProduct')
+const sendOtp = require('../controller/auth/sendOtp')
+const verifyOtp = require('../controller/auth/verifyOtp')
+const forgotPassword = require('../controller/user/forgotPassword')
+const resetPassword = require('../controller/user/resetPassword')
 
 
 router.post("/signup",userSignUpController)
@@ -91,6 +95,11 @@ router.post("/add-address", authToken, addAddress)
 router.get("/get-address", authToken, getUserAddress)
 router.post("/delete-address", authToken, deleteAddress)
 
+router.post("/send-otp", sendOtp);
+router.post("/verify-otp", verifyOtp);
+
+router.post("/forgot-password", forgotPassword);
+router.post("/reset-password", resetPassword);
 
 
 
