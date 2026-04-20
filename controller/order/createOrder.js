@@ -1,7 +1,7 @@
 const orderModel = require("../../models/orderModel")
 const addToCartModel = require("../../models/cartProduct")
 const addressModel = require("../../models/addressModel")
-const Coupon = require("../../models/Coupon")
+const Coupon = require("../../models/coupon")
 
 const createOrder = async (req, res) => {
   try {
